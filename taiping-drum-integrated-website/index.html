@@ -358,21 +358,17 @@
         <!-- 三个项目卡片并排从左至右排列，扑克卡牌样式 -->
         <div class="projects-row">
             <div class="project-card">
-                <h3>智能设计与编程</h3>
+                <h3>京西太平鼓</h3>
                 <div class="project-sub">京西太平鼓 · 非遗节奏游戏</div>
                 <p><strong>设计说明：</strong> 以国家级非遗京西太平鼓为核心，结合手势识别与节奏判定，玩家跟随鼓点完成击打和舞姿动作。在趣味游玩中领略传统民俗风采，让非遗文化焕发新生。</p>
-                <div class="btn-demo" onclick="openProjectDetail(0)">查看项目详情 →</div>
-<a class="btn-demo" href="./game/index.html" style="margin-top:10px;">
-    开始太平鼓游戏 →
-</a>
-
+                <div class="btn-demo" onclick="openProjectDetail(0)">进入小游戏 →</div>
             </div>
 
             <div class="project-card">
-                <h3>人工智能与情感设计</h3>
-                <div class="project-sub">Emo-Morph · 共情数字装置</div>
-                <p><strong>设计说明：</strong> 基于多模态情感识别与生成对抗网络，实时分析观众面部表情与语调，驱动流体形态变色与振动，构建动态视觉反馈，探索AI共情边界。</p>
-                <div class="btn-demo" onclick="openProjectDetail(1)">查看项目详情 →</div>
+                <h3>心境花园</h3>
+                <div class="project-sub">Mood Garden · 情绪交互网页</div>
+                <p><strong>设计说明：</strong> 以“情绪生长”为核心，将用户的心境输入转化为花园中的视觉反馈与交互变化。页面通过柔和的自然意象呈现情绪流动，构建可感知、可停留的数字疗愈体验。</p>
+                <div class="btn-demo" onclick="openProjectDetail(1)">观看演示视频 →</div>
             </div>
 
             <div class="project-card">
@@ -616,6 +612,14 @@
     renderer.domElement.style.cursor = 'pointer';
     
     function openDetailInNewWindow(projectIndex) {
+        if (projectIndex === 0) {
+            window.location.href = 'taipinggu/index.html';
+            return;
+        }
+        if (projectIndex === 1) {
+            window.location.href = 'mood-garden/index.html';
+            return;
+        }
         let title, descriptionHTML;
         if (projectIndex === 0) {
             title = "智能设计与编程 · 京西太平鼓";
